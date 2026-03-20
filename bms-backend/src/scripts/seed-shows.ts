@@ -43,6 +43,10 @@ export const seedShow = async () => {
 // Also, pass your current state (e.g., "West Bengal") to filter theatres.
 // This setup is only for testing purposes to avoid creating shows for all movies.
 
+// Otherwise, you can also do the things below commented if you want to create shows for all movies and states
+//  const movies = await MovieModel.find({});
+//  const theatres = await TheaterModel.find({});
+
   
   const movieIds = ["68e224451aeabaafaa43ac58", "68e224451aeabaafaa43ac57"];
   const movies = await MovieModel.find({ _id: { $in: movieIds } });
