@@ -35,6 +35,15 @@ const toDateWithTime = (baseDate: Date, timeStr: string) => {
 };
 
 export const seedShow = async () => {
+
+// NOTE:
+// First seed your movies and then theaters.
+// After that, select any two movies for which you want to create shows
+// and paste their IDs in the movieIds array below.
+// Also, pass your current state (e.g., "West Bengal") to filter theatres.
+// This setup is only for testing purposes to avoid creating shows for all movies.
+
+  
   const movieIds = ["68e224451aeabaafaa43ac58", "68e224451aeabaafaa43ac57"];
   const movies = await MovieModel.find({ _id: { $in: movieIds } });
   const theatres = await TheaterModel.find({ state: "West Bengal" });
